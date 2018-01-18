@@ -4,6 +4,10 @@ CONDITIONAL_FILTERS = {
         "description": "Objects which have a field that is in a certain range, inclusive",
         "use": "range"
     },
+    "EQUAL_TO": {
+        "description": "Finds objects which do have the provided value.",
+        "use": "value",
+    },
     "NOT_EQUAL_TO": {
         "description": "Finds objects which do not have the provided value.",
         "use": "value",
@@ -65,6 +69,7 @@ AFFILIATE_REPORT_GET_STATS_FIELDS = {
     "OfferUrl.preview_url": {},
     "Stat.ad_campaign_creative_id": {},
     "Stat.ad_campaign_id": {},
+    "Stat.affiliate_info": {},
     "Stat.affiliate_info1": {},
     "Stat.affiliate_info2": {},
     "Stat.affiliate_info3": {},
