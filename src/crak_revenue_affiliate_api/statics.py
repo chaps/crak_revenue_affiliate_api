@@ -1,7 +1,8 @@
 
 CONDITIONAL_FILTERS = {
     "BETWEEN": {
-        "description": "Objects which have a field that is in a certain range, inclusive",
+        "description": "Objects which have a field \
+        that is in a certain range, inclusive",
         "use": "range"
     },
     "EQUAL_TO": {
@@ -13,42 +14,63 @@ CONDITIONAL_FILTERS = {
         "use": "value",
     },
     "LESS_THAN": {
-        "description": "Finds objects which have a value less than the provided value",
+        "description": "Finds objects which have a value less \
+        than the provided value",
         "use": "value"
     },
     "LESS_THAN_OR_EQUAL_TO":  {
-        "description": "Finds objects which have a value less than or equal to the provided value.",
+        "description": "Finds objects which have a value less \
+        than or equal to the provided value.",
         "use": "value"
     },
     "GREATER_THAN": {
-        "description": "Finds objects which have a value greater than the provided value.",
+        "description": "Finds objects which have a value greater\
+         than the provided value.",
         "use": "value",
     },
     "GREATER_THAN_OR_EQUAL": {
         "use": "value",
-        "description": "Finds objects which have a value greater than or equal to the provided value.",
+        "description": "Finds objects which have a value greater than \
+        or equal to the provided value.",
     },
     "LIKE": {
         "use": "value",
-        "description": "Returns objects which have a value that matches the provided string, using case - insensitive search. The '%' character is a wildcard: use at the beginning of the string to find values ending in that string, at the end of the string to find values beginning w ith that string, or in the middle to find values bookended by two parts of the string",
+        "description": "Returns objects which have a value that matches the \
+        provided string, using case - insensitive search. The '%' character \
+        is a wildcard: use at the beginning of the string \
+        to find values ending in that string, at the end of\
+         the string to find values beginning with\
+        that string, or in the middle to find values \
+        bookended by two parts of \
+        the string",
     },
     "NOT_LIKE": {
         "use": "value",
-        "description": "Returns objects which have a value that does not match the provided s tring. The '%' character is a wildcard, with the same function as in the LIKE operator.",
+        "description": "Returns objects which have a value that does not match\
+         the provided s tring. The '%' character is a wildcard, with the same\
+          function as in the LIKE operator.",
     },
     "NULL": {
         "use": "flag",
-        "description": "Finds objects which have a value that is NULL. This is not the same as an empty string; you should use the EQUAL_TO condition al to find objects whose value is an empty string. Notice no \"values\" are passed for this conditional.",
+        "description": "Finds objects which have a value that is NULL.\
+        This is not the same as an empty string; you should use the EQUAL_TO\
+         condition al to find objects whose value is an empty string.\
+          Notice no \"values\" are passed for this conditional.",
     },
     "NOT_NULL": {
-        "description": "Finds objects which have a value that is NOT NULL. This is not the same as an empty string; you should use the NOT_EQUAL_TO conditional to find objects whose value is an not an empty stri ng. Notice no \"values\" are passed for this conditional.",
+        "description": "Finds objects which have a value that is NOT NULL.\
+         This is not the same as an empty string; \
+         you should use the NOT_EQUAL_TO\
+          conditional to find objects whose \
+          value is an not an empty stri ng.\
+           Notice no \"values\" are passed for this conditional.",
         "use": "flag"
     }
 
 }
 
 AFFILIATE_REPORT_GET_STATS_FIELDS = {
-    "AdCampaign.name" : {
+    "AdCampaign.name": {
         "description": "",
 
     },
@@ -58,11 +80,11 @@ AFFILIATE_REPORT_GET_STATS_FIELDS = {
     },
     "Category.id": {
     },
-    "Category.name":{
+    "Category.name": {
     },
     "Country.name": {
     },
-    "Offer.name":{
+    "Offer.name": {
     },
     "OfferFile.display": {},
     "OfferUrl.name": {},
@@ -103,13 +125,17 @@ AFFILIATE_REPORT_GET_STATS_FIELDS = {
 
 AFFILIATE_OFFER_FIND_ALL_FIELDS = {
     "require_terms_ and_conditions": {
-        "description": "Whether or not this Offer requires prior approval before an Affiliate can run it. The text of the terms and conditions is in the \"terms_and_conditions\" field."
+        "description": "Whether or not this Offer requires prior approval\
+         before an Affiliate can run it. The text of the terms and\
+          conditions is in the \"terms_and_conditions\" field."
     },
     "is_expired": {
-        "description": "Whether or not this Offer is expired (i.e. it has a past \"expiration_date\")."
+        "description": "Whether or not this Offer is expired\
+         (i.e. it has a past \"expiration_date\")."
     },
     "use_target_rules": {
-        "description": "Whether or not this Offer has Advanced Targeting enabled."
+        "description": "Whether or not this Offer has Advanced\
+         Targeting enabled."
     },
     "show_custom_variables": {
         "description": ""
@@ -118,7 +144,8 @@ AFFILIATE_OFFER_FIND_ALL_FIELDS = {
     "preview_url": "",
     "terms_and_conditions": "",
     "status": {
-        "description": "The status of the Offer. Affiliates can only view active Offers."
+        "description": "The status of the Offer. Affiliates can only \
+        view active Offers."
     },
     "percent_payout": {
 
@@ -153,7 +180,7 @@ AFFILIATE_OFFER_FIND_ALL_FIELDS = {
 }
 
 urls = {
-    "Affiliate_Report":{
+    "Affiliate_Report": {
         "description": "Returns reports on the affiliate.",
         "url": "http://gateway.crakrevenue.com/affiliate",
         "params": {
@@ -162,7 +189,7 @@ urls = {
                 "Method": "getStats"
             },
             "required": {
-                "api_key":{
+                "api_key": {
                     "type": str,
                 },
                 "fields[]": {
@@ -173,7 +200,7 @@ urls = {
             },
             "optional": {
                 "filters": {
-                    "opts":AFFILIATE_REPORT_GET_STATS_FIELDS
+                    "opts": AFFILIATE_REPORT_GET_STATS_FIELDS
                 },
                 "groups": {
                     "opts": AFFILIATE_REPORT_GET_STATS_FIELDS,
@@ -216,7 +243,7 @@ urls = {
                 "Method": "findAll"
             },
             "required": {
-                "api_key":{
+                "api_key": {
                     "type": str,
                 },
                 "fields[]": {
@@ -227,7 +254,7 @@ urls = {
             },
             "optional": {
                 "filters": {
-                    "opts":AFFILIATE_OFFER_FIND_ALL_FIELDS
+                    "opts": AFFILIATE_OFFER_FIND_ALL_FIELDS
                 },
                 "sort": {
                     "opts": AFFILIATE_OFFER_FIND_ALL_FIELDS
