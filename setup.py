@@ -7,7 +7,7 @@ setup(
     author_email="drumchaps@gmail.com",
     maintainer="Chaps",
     maintainer_email="drumchaps@gmail.com",
-    url="https://bitbucket.org/drumchaps/crak_revenue_affiliate_api",
+    url="https://github.com/chaps/crak_revenue_affiliate_api",
     packages=[
         "crak_revenue_affiliate_api",
     ],
